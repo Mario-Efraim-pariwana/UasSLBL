@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base target="_top" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UAS-SLBL</title>
+
+    <!-- leaflate  -->
+    <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- my css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      .jumbotron {
+        background-image: url('img/k1.jpg');
+      }
+    </style>
+  </head>
+  <body id="home">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark text-light fixed-top bg-secondary">
+      <div class="container">
+        <a class="navbar-brand" href="#home">KKN 2025</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#peta">PETA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#daftar">DAFTAR DESA</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- jumbotron -->
+    <div class="jumbotron d-flex justify-content-center align-items-center flex-column position-relative w-100 vh-100">
+      <h1 class="display-4 py-auto fw-bold selamat">SELAMAT DATANG</h1>
+      <h2 class="desa"></h2>
+      <hr class="my-4" />
+      <div class="justify-content-center icon">
+        <div class="text-center mb-5 fs-3">
+          <a href="#" class="ig"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="ema"><i class="bi bi-envelope-at-fill m-3"></i></a>
+          <a href="#" class="fb"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+      <a class="btn btn-primary btn-lg" href="#peta" role="button">Lihat Peta</a>
+    </div>
+
+    <!-- Peta -->
+    <div id="peta" class="peta container vh-100">
+      <div class="row justify-content-center">
+        <div class="col text-center">
+          <h3>PETA DESA DAN GEREJA KKN 2025</h3>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-2">
+        <div class="col-md-10">
+          <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded border border-3 border-primary" id="map"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Daftar Desa -->
+    <div id="daftar" class="container vh-100">
+      <div class="row justify-content-center">
+        <div class="col text-center">
+          <h3>DAFTAR DESA DAN GEREJA</h3>
+          <table class="table table-striped mt-5">
+            <thead>
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Nama Desa Dan Gereja</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Desa Mbatakapidu</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Desa Watupuda</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Desa Pamburu</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>GKS Pamallar</td>
+              </tr>
+              <tr>
+                <th scope="row">...</th>
+                <td>...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <!-- Ajax -->
+    <script src="js/leaflet.ajax.js"></script>
+    <!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <!-- my js -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
