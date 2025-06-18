@@ -25,7 +25,6 @@ function popUp(f, l) {
 const jsonTest = new L.GeoJSON.AJAX(
   [
     'Geojson/Mbatakapidu.geojson',
-    'Geojson/MatawaiAtu.geojson',
     'Geojson/Rambangaru.geojson',
     'Geojson/Tanaraing.geojson',
     'Geojson/Watupuda.geojson',
